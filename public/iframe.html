@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script defer src="https://tracking.ennlive.org/script.js" data-website-id="06ff4eaf-9dc9-42a9-ac9d-8dd833f18e25"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7001820938357122"
+    crossorigin="anonymous"></script>
+  <meta name="google-adsense-account" content="ca-pub-7001820938357122">
+  <link rel="stylesheet" type="text/css" href="assets/css/iframe.css">
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <link rel="icon" id="icon" href="">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <title>My Drive - Google Drive</title>
+  <script src="assets/js/themes.js"></script>
+  <meta name="google" content="notranslate">
+  <style>
+    .loading-screen {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-top: -2%;
+      height: 100%;
+      align-items: center;
+      flex-direction: column;
+      z-index: 9999999999;
+    }
+
+    iframe {
+      background-color: white;
+    }
+  </style>
+</head>
+
+<div class="loading-screen">
+  <dotlottie-player src="https://lottie.host/15007873-64f3-4f04-aae7-d2f4e59f8575/SVb9rmfpsV.json"
+    background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></dotlottie-player>
+  <p class="info" id="info">
+    Please wait while our servers handle your request. <br />
+    Our site may be experiencing heavy load affecting load times.
+  </p>
+</div>
+
+<body>
+  <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <div class="nav">
+    <div class="nav-logo">
+      <img src="logo.png">
+    </div>
+    <div class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/games.html">Games</a></li>
+      <li><a href="./search">Search</a></li>
+      <li><a href="./settings">Settings</a></li>
+    </div>
+  </div>
+  <div class="iframe-container">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7001820938357122"
+      crossorigin="anonymous"></script>
+    <!-- ML In Game -->
+
+    <iframe id="iframe" src="" frameborder="0" allowfullscreen></iframe>
+    <div class="buttons-bar">
+      <div class="buttons-container">
+        <i class="fa-solid fa-expand" onclick="toggleFullscreen()"></i>
+        <i class="fa-solid fa-arrow-up-right-from-square" onclick="openNew()"></i>
+        <i class="fa-solid fa-arrows-rotate" onclick="reload()"></i>
+      </div>
+    </div>
+  </div>
+  <br>
+  <script src="assets/js/iframe.js"></script>
+  <script src="assets/js/openurl.js"></script>
+  <script src="/assets/js/cloak.js"></script>
+  <form id="uv-form">
+    <input id="uv-search-engine" value="https://www.google.com/search?q=%s" type="hidden" />
+  </form>
+  </div>
+  <script>
+    var iframe = document.getElementById("iframe");
+    iframe.onload = () => {
+      iframe.style.display = "block";
+      document.querySelector(".loading-screen").style.display = "none";
+    };
+
+    function countTime() {
+      localStorage.setItem('timeplayed', parseInt(localStorage.getItem('timeplayed')) + 1);
+      console.log(localStorage.getItem('timeplayed'));
+    }
+
+    if (localStorage.getItem('timeplayed') !== null) {
+      var timer = setInterval(countTime, 1000);
+    } else {
+      localStorage.setItem('timeplayed', 0);
+      var timer = setInterval(countTime, 1000);
+    }
+
+    const quotes = [
+      "Walking all the fish",
+      "Turning on the stage lights",
+      "Opening the curtains",
+      "Turning on the mics",
+      "Getting the orchestra ready",
+      "Sweeping the stage",
+      "Activating the speakers",
+      "Handing out the scripts"
+    ]
+
+    const quotesinterval = setInterval(changeQuote, 1000);
+
+    function changeQuote() {
+      const random = Math.floor(Math.random() * 8);
+      document.getElementById('info').innerHTML = quotes[random];
+    }
+
+    changeQuote();
+
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7001820938357122"
+    crossorigin="anonymous"></script>
+  <!-- In games ad 1 -->
+  <div style="width: 1px; height: 5vh"></div>
+  <center><ins class="adsbygoogle"
+      style="display:block;width:728px;height:90px;text-align: center;position: relative; z-index: -99;"
+      data-ad-client="ca-pub-7001820938357122" data-ad-slot="3507599545"></ins></center>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+
+</body>
+
+</html>

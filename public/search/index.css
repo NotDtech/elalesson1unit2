@@ -1,0 +1,75 @@
+#proxy-address {
+  color: white;
+}
+
+.nav {
+  padding: 10px 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  margin-right: auto;
+}
+
+.nav-links {
+  list-style: none;
+  padding: 5px;
+  display: flex;
+  justify-content: flex-end;
+  font-family: "Poppins", sans-serif;
+}
+
+.nav-links li {
+  margin: 0 10px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--text-color);
+  font-size: 18px;
+  position: relative;
+}
+
+.nav-links li a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background:var(--third-color);
+  transition: width 0.3s;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+
+.time {
+  color: var(--text-color);
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  margin: 10px auto;
+  padding: 5px;
+  border-radius: 50px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10vw;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+}
+
+.container h1 {
+  background: linear-gradient(90deg, #001f3f, #003366, #001f3f);
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin: 0;
+  color: transparent;
+  font-size: 68px;
+}
